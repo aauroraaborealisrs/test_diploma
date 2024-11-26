@@ -36,7 +36,7 @@ const Register: React.FC = () => {
   useEffect(() => {
     const fetchSports = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/sport/list");
+        const response = await fetch("https://test1-tvxg.onrender.com/api/sport/list");
         const data = await response.json();
         const formattedSports = data.map((sport: any) => ({
           value: sport.sport_id,
@@ -57,7 +57,7 @@ const Register: React.FC = () => {
       const fetchTeams = async () => {
         try {
           const response = await fetch(
-            `http://localhost:8080/api/team/list?sport_id=${sport.value}`
+            `https://test1-tvxg.onrender.com/api/team/list?sport_id=${sport.value}`
           );
           const data = await response.json();
           const formattedTeams = data.map((team: any) => ({
@@ -93,7 +93,7 @@ const Register: React.FC = () => {
     };
   
     try {
-      const response = await fetch("http://localhost:8080/api/register", {
+      const response = await fetch("https://test1-tvxg.onrender.com/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -129,7 +129,7 @@ const Register: React.FC = () => {
     console.log("New Team Name:", newTeamName);
 
     try {
-      const response = await fetch("http://localhost:8080/api/team/create", {
+      const response = await fetch("https://test1-tvxg.onrender.com/api/team/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -169,7 +169,7 @@ const Register: React.FC = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:8080/api/sport/create", {
+      const response = await fetch("https://test1-tvxg.onrender.com/api/sport/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

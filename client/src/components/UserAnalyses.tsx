@@ -29,7 +29,7 @@
 //       }
 
 //       try {
-//         const response = await fetch("http://localhost:8080/api/analysis/user", {
+//         const response = await fetch("https://test1-tvxg.onrender.com/api/analysis/user", {
 //           method: "GET",
 //           headers: {
 //             Authorization: `Bearer ${token}`, // Добавляем токен в заголовок
@@ -124,7 +124,7 @@
 //       }
 
 //       try {
-//         const response = await fetch("http://localhost:8080/api/analysis/user", {
+//         const response = await fetch("https://test1-tvxg.onrender.com/api/analysis/user", {
 //           method: "GET",
 //           headers: {
 //             Authorization: `Bearer ${token}`,
@@ -230,7 +230,7 @@ const UserAnalyses: React.FC = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:8080/api/analysis/user", {
+        const response = await fetch("https://test1-tvxg.onrender.com/api/analysis/user", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

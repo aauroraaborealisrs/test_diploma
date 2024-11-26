@@ -19,7 +19,7 @@ const AnthropometryForm: React.FC = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:8080/api/anthropometry', {
+            const response = await fetch('https://test1-tvxg.onrender.com/api/anthropometry', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

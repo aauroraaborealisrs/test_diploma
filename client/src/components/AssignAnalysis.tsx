@@ -23,7 +23,7 @@
 //   useEffect(() => {
 //     const fetchSports = async () => {
 //       try {
-//         const response = await fetch("http://localhost:8080/api/sport/list");
+//         const response = await fetch("https://test1-tvxg.onrender.com/api/sport/list");
 //         const data = await response.json();
 //         const formattedSports = data.map((sport: any) => ({
 //           value: sport.sport_id,
@@ -44,7 +44,7 @@
 //       const fetchTeams = async () => {
 //         try {
 //           const response = await fetch(
-//             `http://localhost:8080/api/team/list?sport_id=${sport.value}`
+//             `https://test1-tvxg.onrender.com/api/team/list?sport_id=${sport.value}`
 //           );
 //           const data = await response.json();
 //           const formattedTeams = data.map((team: any) => ({
@@ -77,7 +77,7 @@
 //     };
 
 //     try {
-//       const response = await fetch("http://localhost:8080/api/analysis/assign", {
+//       const response = await fetch("https://test1-tvxg.onrender.com/api/analysis/assign", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -176,7 +176,7 @@ const AssignAnalysis: React.FC = () => {
   useEffect(() => {
     const fetchAnalyzes = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/analysis");
+        const response = await fetch("https://test1-tvxg.onrender.com/api/analysis");
         const data = await response.json();
         setAnalyzes(
           data.map((analyze: any) => ({
@@ -196,7 +196,7 @@ const AssignAnalysis: React.FC = () => {
   useEffect(() => {
     const fetchSports = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/sport/list");
+        const response = await fetch("https://test1-tvxg.onrender.com/api/sport/list");
         const data = await response.json();
         setSports(
           data.map((sport: any) => ({
@@ -218,7 +218,7 @@ const AssignAnalysis: React.FC = () => {
       const fetchTeams = async () => {
         try {
           const response = await fetch(
-            `http://localhost:8080/api/team/list?sport_id=${selectedSport.value}`
+            `https://test1-tvxg.onrender.com/api/team/list?sport_id=${selectedSport.value}`
           );
           const data = await response.json();
           setTeams(
@@ -257,7 +257,7 @@ const AssignAnalysis: React.FC = () => {
     console.log(assignment);
 
     try {
-      const response = await fetch("http://localhost:8080/api/analysis/assign", {
+      const response = await fetch("https://test1-tvxg.onrender.com/api/analysis/assign", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

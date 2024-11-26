@@ -46,7 +46,7 @@ const SubmitAnalysis: React.FC = () => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("Нет токена авторизации");
 
-      const response = await fetch("http://localhost:8080/api/analysis/submit", {
+      const response = await fetch("https://test1-tvxg.onrender.com/api/analysis/submit", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
